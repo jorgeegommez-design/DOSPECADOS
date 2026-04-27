@@ -113,3 +113,66 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+// ── Nav dropdown ──────────────────────────────────────────────────────────
+const menuBtn = document.getElementById('menuBtn');
+const navDropdown = document.getElementById('navDropdown');
+
+function openMenu() {
+  navDropdown.classList.add('open');
+  menuBtn.classList.add('open');
+  menuBtn.setAttribute('aria-expanded', 'true');
+}
+function closeMenu() {
+  navDropdown.classList.remove('open');
+  menuBtn.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+}
+
+menuBtn.addEventListener('click', e => {
+  e.stopPropagation();
+  navDropdown.classList.contains('open') ? closeMenu() : openMenu();
+});
+
+document.addEventListener('click', closeMenu);
+navDropdown.addEventListener('click', e => e.stopPropagation());
+
+function activateTab(cat) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat);
+  });
+  ['burgers', 'sides', 'bebidas'].forEach(c => {
+    document.getElementById(`cat-${c}`).style.display = c === cat ? 'grid' : 'none';
+  });
+  document.querySelectorAll('.burger-tile.expanded').forEach(t => t.classList.remove('expanded'));
+}
+
+navDropdown.querySelectorAll('.nav-drop-item').forEach(item => {
+  item.addEventListener('click', () => {
+    closeMenu();
+    const action = item.dataset.action;
+    const carta = document.getElementById('carta');
+    carta.scrollIntoView({ behavior: 'smooth' });
+
+    if (action === 'burgers') {
+      activateTab('burgers');
+    } else if (action === 'sides') {
+      activateTab('sides');
+    } else if (action === 'batidos' || action === 'bebidas') {
+      activateTab('bebidas');
+    } else if (action === 'reto') {
+      activateTab('burgers');
+      setTimeout(() => {
+        const condena = document.querySelector('.burger-tile[data-id="4"]');
+        if (condena) {
+          document.querySelectorAll('.burger-tile.expanded').forEach(t => t.classList.remove('expanded'));
+          condena.classList.add('expanded');
+          setTimeout(() => {
+            const r = condena.getBoundingClientRect();
+            if (r.top < 100) window.scrollBy({ top: r.top - 100, behavior: 'smooth' });
+          }, 50);
+        }
+      }, 600);
+    }
+  });
+});

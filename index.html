@@ -14,9 +14,18 @@
   <a href="#" class="logo-nav" aria-label="Dos Pecados">
     <img src="https://i.ibb.co/hFXgjy1M/Logotipo-Completo-Blanco.png" alt="Dos Pecados" class="logo-nav-img" referrerpolicy="no-referrer"/>
   </a>
-  <button class="nav-menu-btn" onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-menu-wrap">
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-dropdown" id="navDropdown" role="menu">
+      <button class="nav-drop-item" data-action="burgers" role="menuitem">🍔 Hamburguesa</button>
+      <button class="nav-drop-item" data-action="sides"   role="menuitem">🍟 Aperitivo</button>
+      <button class="nav-drop-item" data-action="batidos" role="menuitem">🥤 Batidos</button>
+      <button class="nav-drop-item" data-action="bebidas" role="menuitem">🌺 Bebidas</button>
+      <button class="nav-drop-item nav-drop-reto" data-action="reto" role="menuitem">🔥 Gran Reto</button>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
