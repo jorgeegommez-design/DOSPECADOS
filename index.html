@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Dos Pecados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo-nav" aria-label="Dos Pecados">
+    <img src="https://i.ibb.co/hFXgjy1M/Logotipo-Completo-Blanco.png" alt="Dos Pecados" class="logo-nav-img" referrerpolicy="no-referrer"/>
+  </a>
+  <button class="nav-menu-btn" onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <img src="https://i.ibb.co/hFXgjy1M/Logotipo-Completo-Blanco.png" alt="" class="hero-logo-bg" referrerpolicy="no-referrer"/>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Hamburguesería · Desde 2024</span>
+    <h1 class="hero-h1">
+      <span class="dos">DOS</span>
+      <span class="pecados">PECADOS</span>
+    </h1>
+    <p class="hero-tag">Carne. Fuego. Sin arrepentimiento.</p>
+    <div class="hero-btns">
+      <a href="#carta" class="btn-rojo">Ver carta</a>
+      <a href="#donde" class="btn-outline">Dónde estamos</a>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>CARNE DE PRIMERA</span><span>·</span>
+    <span>SIN CULPA</span><span>·</span>
+    <span>FUEGO REAL</span><span>·</span>
+    <span>DOS PECADOS</span><span>·</span>
+    <span>SMASH BURGER</span><span>·</span>
+    <span>DOBLE PLACER</span><span>·</span>
+    <span>CARNE DE PRIMERA</span><span>·</span>
+    <span>SIN CULPA</span><span>·</span>
+    <span>FUEGO REAL</span><span>·</span>
+    <span>DOS PECADOS</span><span>·</span>
+  </div>
+</div>
+
+<!-- GALERÍA -->
+<section class="galeria" id="galeria">
+  <div class="sec-header">
+    <span class="sec-tag">Nuestras burgers</span>
+    <h2 class="sec-h2">ASÍ SE VEN<br/>LOS PECADOS</h2>
+  </div>
+  <div class="fotos-slider" id="slider">
+    <div class="foto-slide">
+      <img id="img1" src="" alt=""/>
+      <div class="foto-caption"><strong>El Pecado</strong><small>Smash Sencilla</small></div>
+    </div>
+    <div class="foto-slide">
+      <img id="img2" src="" alt=""/>
+      <div class="foto-caption"><strong>La Lujuria</strong><small>Smash Doble · El más pedido</small></div>
+    </div>
+    <div class="foto-slide">
+      <img id="img3" src="" alt=""/>
+      <div class="foto-caption"><strong>La Gula</strong><small>Triple Smash · Signature</small></div>
+    </div>
+  </div>
+  <div class="foto-dots" id="dots">
+    <div class="dot active" data-i="0"></div>
+    <div class="dot" data-i="1"></div>
+    <div class="dot" data-i="2"></div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section class="carta-sec" id="carta">
+  <div class="carta-header">
+    <span class="sec-tag">Los pecados capitales</span>
+    <h2 class="sec-h2">NUESTRA CARTA</h2>
+  </div>
+
+  <div class="carta-tabs">
+    <button class="tab-btn active" data-cat="burgers"><span class="tab-emoji">🍔</span>Burgers</button>
+    <button class="tab-btn" data-cat="sides"><span class="tab-emoji">🍟</span>Sides</button>
+    <button class="tab-btn" data-cat="bebidas"><span class="tab-emoji">🥤</span>Bebidas</button>
+  </div>
+
+  <!-- BURGERS -->
+  <div class="burgers-grid" id="cat-burgers">
+
+    <!-- 0 La Lujuria -->
+    <div class="burger-tile" data-id="0">
+      <img class="burger-tile-img" id="t-img0" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">La Lujuria</div>
+        <div class="burger-tile-tipo">Smash Doble</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>185</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img0" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge hot">⚡ El más pedido</span>
+          <div class="expand-nombre">La Lujuria</div>
+          <div class="expand-tipo">Smash Burger Doble · 240g</div>
+          <p class="expand-desc">Doble carne smash 120g, cheddar madurado, cebolla caramelizada, pepinillos en vinagre y salsa secreta de la casa.</p>
+          <div class="expand-alerg">
+            <div class="alerg" title="Lácteos">🥛</div>
+            <div class="alerg" title="Gluten">🌾</div>
+            <div class="alerg" title="Huevo">🥚</div>
+            <div class="alerg" title="Ajo">🧄</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>185</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1 El Pecado -->
+    <div class="burger-tile" data-id="1">
+      <img class="burger-tile-img" id="t-img1" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">El Pecado</div>
+        <div class="burger-tile-tipo">Smash Sencilla</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>145</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img1" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge">Clásica</span>
+          <div class="expand-nombre">El Pecado Original</div>
+          <div class="expand-tipo">Smash Sencilla · 120g</div>
+          <p class="expand-desc">Carne smash 120g, queso americano fundido, mostaza, catsup, cebolla blanca y pepinillo. La clásica perfeccionada.</p>
+          <div class="expand-alerg">
+            <div class="alerg">🥛</div>
+            <div class="alerg">🌾</div>
+            <div class="alerg">🥚</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>145</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 La Gula -->
+    <div class="burger-tile" data-id="2">
+      <img class="burger-tile-img" id="t-img2" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">La Gula</div>
+        <div class="burger-tile-tipo">Triple Smash</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>235</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img2" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge">Signature</span>
+          <div class="expand-nombre">La Gula</div>
+          <div class="expand-tipo">Triple Smash · 360g</div>
+          <p class="expand-desc">Triple carne 180g, triple queso, tocino crujiente, salsa BBQ negra, jalapeños frescos y cebolla frita.</p>
+          <div class="expand-alerg">
+            <div class="alerg">🥛</div>
+            <div class="alerg">🌾</div>
+            <div class="alerg">🥚</div>
+            <div class="alerg">🌶️</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>235</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 La Ira -->
+    <div class="burger-tile" data-id="3">
+      <img class="burger-tile-img" id="t-img3" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">La Ira</div>
+        <div class="burger-tile-tipo">Hot Smash</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>195</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img3" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge hot">🌶️ Picante</span>
+          <div class="expand-nombre">La Ira</div>
+          <div class="expand-tipo">Hot Smash · 150g</div>
+          <p class="expand-desc">Carne smash 150g, queso pepper jack, salsa ghost pepper, jalapeños en escabeche, cilantro y lima.</p>
+          <div class="expand-alerg">
+            <div class="alerg">🥛</div>
+            <div class="alerg">🌾</div>
+            <div class="alerg">🌶️</div>
+            <div class="alerg">🧄</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>195</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 La Condena -->
+    <div class="burger-tile" data-id="4">
+      <img class="burger-tile-img" id="t-img4" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">La Condena</div>
+        <div class="burger-tile-tipo">Death × 4</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>320</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img4" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge hot">🔥 Reto</span>
+          <div class="expand-nombre">La Condena</div>
+          <div class="expand-tipo">Death Smash × 4 · 480g</div>
+          <p class="expand-desc">Cuádruple carne 240g, cuádruple cheddar, tocino doble, salsa carolina reaper. Solo para valientes. ¿Te atreves?</p>
+          <div class="expand-alerg">
+            <div class="alerg">🥛</div>
+            <div class="alerg">🌾</div>
+            <div class="alerg">🌶️</div>
+            <div class="alerg">🥚</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>320</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 La Soberbia -->
+    <div class="burger-tile" data-id="5">
+      <img class="burger-tile-img" id="t-img5" src="" alt=""/>
+      <div class="burger-tile-body">
+        <div class="burger-tile-nombre">La Soberbia</div>
+        <div class="burger-tile-tipo">Truffle Wagyu</div>
+      </div>
+      <div class="burger-tile-foot">
+        <span class="burger-tile-precio"><sup>$</sup>265</span>
+        <button class="tile-add">+</button>
+      </div>
+      <div class="expand-content">
+        <div class="expand-img-wrap">
+          <img id="e-img5" src="" alt=""/>
+          <button class="expand-close">✕</button>
+        </div>
+        <div class="expand-body">
+          <span class="expand-badge">Nueva</span>
+          <div class="expand-nombre">La Soberbia</div>
+          <div class="expand-tipo">Truffle Wagyu · 150g</div>
+          <p class="expand-desc">Carne Wagyu 150g, queso brie fundido, mayonesa de trufa negra, rúcula, cebolla morada y reducción de balsámico.</p>
+          <div class="expand-alerg">
+            <div class="alerg">🥛</div>
+            <div class="alerg">🌾</div>
+            <div class="alerg">🥚</div>
+            <div class="alerg">🍄</div>
+          </div>
+          <div class="expand-foot">
+            <span class="expand-precio"><sup>$</sup>265</span>
+            <button class="expand-add">Añadir al pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /burgers-grid -->
+
+  <!-- SIDES -->
+  <div class="burgers-grid" id="cat-sides" style="display:none">
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23161616' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🍟%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Papas Smash</div><div class="burger-tile-tipo">Sal de mar</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>65</span><button class="tile-add">+</button></div>
+    </div>
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23161616' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🥔%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Papas Trufadas</div><div class="burger-tile-tipo">Parmesano</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>95</span><button class="tile-add">+</button></div>
+    </div>
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23161616' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🧅%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Aros de Cebolla</div><div class="burger-tile-tipo">Chipotle</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>75</span><button class="tile-add">+</button></div>
+    </div>
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23161616' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🍗%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Nuggets × 6</div><div class="burger-tile-tipo">Tres salsas</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>85</span><button class="tile-add">+</button></div>
+    </div>
+  </div>
+
+  <!-- BEBIDAS -->
+  <div class="burgers-grid" id="cat-bebidas" style="display:none">
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23161616' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🥤%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Malteada Negra</div><div class="burger-tile-tipo">Oreo · vainilla</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>90</span><button class="tile-add">+</button></div>
+    </div>
+    <div class="burger-tile">
+      <img class="burger-tile-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%238A0000' width='400' height='300'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='80'%3E🌺%3C/text%3E%3C/svg%3E"/>
+      <div class="burger-tile-body"><div class="burger-tile-nombre">Refresco del Diablo</div><div class="burger-tile-tipo">Jamaica · tajín</div></div>
+      <div class="burger-tile-foot"><span class="burger-tile-precio"><sup>$</sup>55</span><button class="tile-add">+</button></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- MANIFIESTO -->
+<section class="manifiesto">
+  <img src="https://i.ibb.co/hFXgjy1M/Logotipo-Completo-Blanco.png" alt="" class="logo-manif-img" referrerpolicy="no-referrer"/>
+  <p class="m-cita">"El primer pecado te engancha.<br/>El segundo, te define para siempre."</p>
+  <div class="m-linea"></div>
+  <p class="m-firma">— Dos Pecados · Ciudad de México</p>
+</section>
+
+<!-- NOSOTROS -->
+<section class="sec" id="nosotros">
+  <span class="sec-tag">Quiénes somos</span>
+  <h2 class="sec-h2">SIN TRAMPA,<br/>SOLO CARNE</h2>
+  <p class="sec-sub">Nacimos de la obsesión por la hamburguesa perfecta. Sin adornos. Solo carne de calidad, técnica smash, y honestidad total.</p>
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Carne Angus fresca</div></div>
+    <div class="stat"><div class="stat-num">48h</div><div class="stat-label">Fermentación del bun</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Pecados en carta</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Congelados. Nunca.</div></div>
+  </div>
+</section>
+
+<!-- DÓNDE -->
+<section class="sec donde-sec" id="donde">
+  <span class="sec-tag">Encuéntranos</span>
+  <h2 class="sec-h2">DÓNDE<br/>ENCONTRARNOS</h2>
+  <p class="sec-sub">Ven a cometer tu primer pecado. Te esperamos.</p>
+
+  <div class="mapa-placeholder">
+    <div class="mapa-overlay"></div>
+    <div class="mapa-pin">
+      <span class="mapa-pin-dot">📍</span>
+      <p>Roma Norte · CDMX</p>
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="info-card-icon">📍</div>
+      <div>
+        <div class="info-card-t">Dirección</div>
+        <div class="info-card-v">Av. Álvaro Obregón 123<br/>Col. Roma Norte, CDMX</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🕐</div>
+      <div>
+        <div class="info-card-t">Horarios</div>
+        <div class="info-card-v">Lun – Vie: 13:00 – 23:00<br/>Sáb – Dom: 12:00 – 00:30</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🚇</div>
+      <div>
+        <div class="info-card-t">Cómo llegar</div>
+        <div class="info-card-v">Metro Insurgentes (L1)<br/>Metrobús Álvaro Obregón</div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🅿️</div>
+      <div>
+        <div class="info-card-t">Estacionamiento</div>
+        <div class="info-card-v">Valet parking disponible<br/>Jue – Dom desde las 18:00</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/5215512345678" class="wpp-btn">📱 Contactar por WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo" aria-label="Dos Pecados">
+    <img src="https://i.ibb.co/hFXgjy1M/Logotipo-Completo-Blanco.png" alt="Dos Pecados" class="logo-footer-img" referrerpolicy="no-referrer"/>
+  </a>
+  <p class="footer-tag">Hamburguesería · CDMX · Est. 2024</p>
+  <div class="footer-links">
+    <a href="#carta">Carta</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#donde">Dónde estamos</a>
+  </div>
+  <div class="redes">
+    <a href="#" class="social">IG</a>
+    <a href="#" class="social">FB</a>
+    <a href="#" class="social">TK</a>
+  </div>
+  <p class="copy">© 2024 Dos Pecados Hamburguesería</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
